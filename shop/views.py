@@ -4,15 +4,15 @@ from .models import Category, Product
 
 # Страница со списком товаров
 
-def ProductList(request, category_slug=None):
+def productlist(request, category_slug=None):
 	category=None
 	categories = Category.objects.all()
-	products = Products.objects.filter(available=True)
+	products = Product.objects.filter(available=True)
 	
 	if category_slug:
 		category = get_object_or_404(Category, slug= category_slug)
 		products = products.filter(category=category)
-	return render(request, 'shop/product/list.html', {
+	return render(request, 'shop/list.html', {
 		'category':category,
 		'categories':categories,
 		'products': products
@@ -21,8 +21,11 @@ def ProductList(request, category_slug=None):
 
 
 # Страница товара
-def ProductDetail(request, id, slug):
+def productdetail(request, id, slug):
 	product = get_object_or_404(Product, id=id, slug=slug, available=True)
-	return render(request, 'shop/product/detail.html', {
+	return render(request, 'shop/detail.html', {
 		'product': product
 		})
+
+
+

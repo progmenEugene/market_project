@@ -1,9 +1,245 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Game Market</title>
-</head>
-<body>
 
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Game Market</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top" id="navigations">
+        <a class="navbar-brand" href="#"><img src='{% static "gamepad.png" %}' alt='logo'></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navigation " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Условия доставки и оплаты</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <header>
+        <div class=" jumbotron-fluid jumbotron text-white" id='imgbg'>
+            <div class="container text-center">
+                <h1 class="display-4">GAME MARKET</h1>
+                <h5>Место где ты можешь воплотить мечты!</h5>
+            </div>
+        </div>
+    </header>
+    <main>
+        {% block content %} {% endblock %}
+    </main>
+    	<hr>
+       
+            <div class="row p-3" >
+               
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab  item">
+                        <div class="folded-corner service_tab_1">
+                            <div class="text">
+                               <img class="fa-icon-image " src='{% static "shipped.png" %}'>
+                                <p class="item-title">
+                                    <h3>Товар</h3>
+                                </p>
+                                <!-- /.item-title -->
+                                <p>
+                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+                        <div class="folded-corner service_tab_1">
+                            <div class="text">
+                                <img class="fa-icon-image" src='{% static "box.png" %}'>
+                                <p class="item-title">
+                                    <h3>Поставка</h3>
+                                </p>
+                                <!-- /.item-title -->
+                                <p>
+                                  
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+                        <div class="folded-corner service_tab_1">
+                            <div class="text">
+                               <img class="fa-icon-image" src='{% static "payment-method.png" %}'>
+                                <p class="item-title">
+                                    <h3>Предоплата</h3>
+                                </p>
+                                <!-- /.item-title -->
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+                        <div class="folded-corner service_tab_1">
+                            <div class="text">
+                               <img class="fa-icon-image" src='{% static "team.png" %}'>
+                                <p class="item-title">
+                                    <h3>Почему мы?</h3>
+                                </p>
+                                <!-- /.item-title -->
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+                        <div class="folded-corner service_tab_1">
+                            <div class="text">
+                                <img class="fa-icon-image" src='{% static "coins.png" %}'>
+                                <p class="item-title">
+                                    <h3>Дешевле</h3>
+                                </p>
+                                <!-- /.item-title -->
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+                        <div class="folded-corner service_tab_1" >
+                            <div class="text">
+                                <img class="fa-icon-image" src='{% static "calendar.png" %}'>
+                                <p class="item-title">
+                                    <h3>Время доставки</h3>
+                                </p>
+                                <!-- /.item-title -->
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+                        <div class="folded-corner service_tab_1">
+                            <div class="text">
+                                <img class="fa-icon-image" src='{% static "customer.png" %}'>
+                                <p class="item-title">
+                                    <h3>Все для вас</h3>
+                                </p>
+                                <!-- /.item-title -->
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 Services-tab item">
+                        <div class="folded-corner service_tab_1">
+                            <div class="text">
+                                <img class="fa-icon-image" src='{% static "guarantee.png" %}'>
+                                <p class="item-title">
+                                    <h3>Гарантия</h3>
+                                </p>
+                                <!-- /.item-title -->
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        
+    
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark">
+        <div style="background-color: #6351ce;">
+            <div class="container">
+                <div class="row py-4 d-flex align-items-center">
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h3 class="mb-0">Присоеденяйтесь к нам!</h3>
+                    </div>
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+                        <!-- Facebook -->
+                        <a href='#' class="p-2">
+              <img src='{% static "facebook.png" %}'>
+            </a>
+                        <!--Instagram-->
+                        <a href="#" class='p-2'>
+              <img src='{% static "instagram.png" %}'>
+            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center text-md-left mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h5 class="text-uppercase font-weight-bold">GAME MARKET</h5>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Интернет магазин для заядлых гаймеров, которые любят консоли.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Продукция</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Playstation</a>
+                    </p>
+                    <p>
+                        <a href="#!">X-BOX</a>
+                    </p>
+                    <p>
+                        <a href="#!">Nintendo</a>
+                    </p>
+                    <p>
+                        <a href="#!">Аксессуары</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Аккаунт</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Личный кабинет</a>
+                    </p>
+                    <p>
+                        <a href="#!">О Нас</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Контакты</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fa fa-home mr-3"></i> Украина</p>
+                    <p>
+                        <i class="fa fa-envelope mr-3"></i> ecompx@gmail.com</p>
+                    <p>
+                        <i class="fa fa-phone mr-3"></i> +380 00 000 00 00</p>
+                    <p>
+                        <i class="fa fa-print mr-3"></i> +380 00 000 00 00</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/bootstrap-tutorial/"> Fcorporation</a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
+
 </html>

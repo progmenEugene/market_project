@@ -56,7 +56,7 @@ ROOT_URLCONF = 'market_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['market_project/tempaltes'],
+        'DIRS': ['market_project/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,7 +122,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'dostavka/static/')
+    os.path.join(BASE_DIR, 'market_project/static/')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
